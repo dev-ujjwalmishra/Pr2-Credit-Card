@@ -1,1 +1,3 @@
 # Pr2-Credit-Card
+It's a simple practice project which i have made after watching a youtube video. UI is same but coding is done by myself. The rotate effect was bit challenging as beginner...
+Happy Coding 😍
