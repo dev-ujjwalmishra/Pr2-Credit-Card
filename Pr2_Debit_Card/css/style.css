@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272640;
+    position: relative;
+    perspective: 1000px;
+}
+
+.container::before{
+    content: '';
+    min-height: 250px;
+    min-width: 250px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, purple,white);
+    position: absolute;
+    transform: translate(-150px,-100px);
+}
+
+.container::after{
+    content: '';
+    min-height: 250px;
+    min-width: 250px;
+    border-radius: 50%;
+    background: linear-gradient(-90deg,purple,white);
+    position: absolute;
+    transform: translate(150px,100px);
+}
+
+.card-container{
+    position: relative;
+    height: 225px;
+    width: 375px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-container:hover{
+    transform: rotateY(180deg);
+}
+
+.card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 25px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.1);
+    backface-visibility: hidden;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 17px;
+}
+
+.logo img{
+    width: 50px;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.chip img{
+    width: 47px;
+    display: block;
+}
+
+.card-main{
+    margin-top: 22px;
+}
+
+.card-number-container p:first-child{
+    font-size: 13px;
+}
+
+.card-number{
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.other-info{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name{
+    font-size: 17px;
+}
+
+.exp-date p:first-child{
+    font-size: 13px;
+}
+
+.exp-date p:last-child{
+    font-size: 16px;
+}
+
+.back-face{
+    border: none;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.contact-info-msg{
+    font-size: 10px;
+}
+
+.black-strip{
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    margin-top: 5px;
+}
+
+.white-strip{
+    height: 40px;
+    /* width: 75%; */
+    margin-top: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    position: relative;
+    z-index: 300;
+}
+
+.pattern{
+    height: 100%;
+    width: 75%;
+    background: repeating-linear-gradient(#fff, #fff 3px, #5b5959 10px, #fff 3px);
+    border-radius: 10px;
+}
+
+.cvv{
+    position: relative;
+    left: -5px;
+    background-color: white;
+    padding: 0 3px;
+    border-radius: 5px;
+    z-index: -3;
+}
+
+.query-msg{
+    margin-top: 10px;
+    font-size: 10px;
+}
